@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Qur'on Tajvid</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link href="../media/vs.png" rel="icon">
+<link href="../media/vs.png" rel="apple-touch-icon">
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('../media/background.jpeg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+.w3-jumbo {
+  text-align: center
+}
+</style>
+</head>
+<body>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge">
+  </div>
+  <div class="w3-display-middle">
+    <h1 class="w3-jumbo w3-animate-top">COMING SOON</h1>
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+    <p class="w3-large w3-center timer"></p>
+  </div>
+  <div class="w3-display-bottomleft w3-padding-large">
+    Powered by <a href="https://Sarvarbek.uz" target="_blank">Sarvarbek.uz</a>
+  </div>
+</div>
+
+<script>
+  var countDownDate = new Date("may 5, 2023 11:27:15").getTime();
+  var timeClear = setInterval(function() {
+     var now = new Date().getTime();
+     var timeLeft = countDownDate - now;
+     var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+     var hours = Math.floor(
+        (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+     );
+     var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+     var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+     document.querySelector(".timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+     if (timeLeft < 0) {
+        clearInterval(timeClear);
+        document.querySelector(".timer").innerHTML = "Timer Finished";
+     }
+  }, 1000);
+</script>
+
+</body>
+</html>
